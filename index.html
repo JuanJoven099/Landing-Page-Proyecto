@@ -1,244 +1,229 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AdminMarket - Inicio</title>
+    <title>AdminMarket | Administra tu negocio</title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header class="navbar">
+    <header>
 
-        <a href="./index.html" class="logo">
-            <span class="logo-icon">▥</span>
-            <span class="admin">Admin</span><span class="market">Market</span>
-        </a>
-
-        <div class="usuario">
-
-            <a href="./iniciodesesion/index.html" class="inicio-sesion">
-                🔒 Inicio de sesión
-            </a>
-
-            <a href="./registrar/index.html" class="crear-cuenta">
-                👤 Crear cuenta
-            </a>
-
+        <div class="logo">
+            Admin<span>Market</span>
         </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="./iniciodesesion/index.html" class="btn-login">
+                Iniciar sesión
+            </a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
 
     </header>
 
-    <main class="contenedor">
+    <section class="hero" id="inicio">
 
+        <div class="hero-text">
 
+            <p class="subtitle">
+                GESTIÓN SENCILLA PARA TU NEGOCIO
+            </p>
 
-        <section class="bienvenida">
-
-            <div>
-
-                <p class="saludo">
-                    Bienvenido a
-                </p>
-
-                <h1>
-                    Admin<span>Market</span>
-                </h1>
-
-                <p class="descripcion">
-                    Administra tu negocio de forma fácil,
-                    rápida y segura.
-                </p>
-
-            </div>
-
-            <div class="icono-bienvenida">
-                🏪
-            </div>
-
-        </section>
-
-
-
-
-        <div class="titulo-seccion">
-
-            <h2>
-                ¿Qué deseas hacer?
-            </h2>
+            <h1>
+                Administra tu negocio
+                <span>de forma fácil</span>
+            </h1>
 
             <p>
-                Selecciona una opción para comenzar.
+                AdminMarket es una aplicación web que te permite
+                controlar productos, inventario, ventas y ganancias
+                desde un solo lugar.
             </p>
+
+            <div class="buttons">
+
+                <a href="#beneficios" class="btn-primary">
+                    Conocer más
+                </a>
+
+                <a href="./registrar/index.html" class="btn-secondary">
+                    Comenzar ahora
+                </a>
+
+            </div>
 
         </div>
 
-        <section class="tarjetas">
 
+        <div class="hero-card">
 
-            <a
-                href="#"
-                class="tarjeta tarjeta-productos"
-                onclick="proximamente(event, 'Registro de productos')"
-            >
+            <div class="dashboard">
 
-                <div class="icono">
-                    🛍️
-                </div>
+                <h2>AdminMarket</h2>
 
-                <div class="contenido-tarjeta">
+                <p class="dashboard-title">
+                    ¿Qué deseas hacer?
+                </p>
 
-                    <h3>
-                        Registrar producto
-                    </h3>
+                <div class="cards">
 
-                    <p>
-                        Agrega nuevos productos,
-                        precios y cantidades a tu inventario.
-                    </p>
+                    <div class="card">
+                        <div class="icon">📦</div>
+                        <h3>Registrar producto</h3>
+                        <p>Agrega productos, precios y cantidades.</p>
+                    </div>
 
-                </div>
+                    <div class="card">
+                        <div class="icon">🛒</div>
+                        <h3>Registrar ventas</h3>
+                        <p>Registra y controla tus movimientos.</p>
+                    </div>
 
-                <span class="flecha">
-                    →
-                </span>
+                    <div class="card">
+                        <div class="icon">📋</div>
+                        <h3>Inventario</h3>
+                        <p>Consulta tus productos y controla el stock.</p>
+                    </div>
 
-            </a>
-
-
-            <a
-                href="#"
-                class="tarjeta"
-                onclick="proximamente(event, 'Registro de ventas')"
-            >
-
-                <div class="icono">
-                    🛒
-                </div>
-
-                <div class="contenido-tarjeta">
-
-                    <h3>
-                        Registrar ventas
-                    </h3>
-
-                    <p>
-                        Registra las ventas realizadas
-                        y controla tus movimientos.
-                    </p>
+                    <div class="card">
+                        <div class="icon">📊</div>
+                        <h3>Ganancias</h3>
+                        <p>Revisa el rendimiento de tu negocio.</p>
+                    </div>
 
                 </div>
 
-                <span class="flecha">
-                    →
-                </span>
-
-            </a>
-
-
-            <a
-                href="#"
-                class="tarjeta"
-                onclick="proximamente(event, 'Inventario')"
-            >
-
-                <div class="icono">
-                    📦
-                </div>
-
-                <div class="contenido-tarjeta">
-
-                    <h3>
-                        Inventario
-                    </h3>
-
-                    <p>
-                        Consulta tus productos y
-                        controla el stock disponible.
-                    </p>
-
-                </div>
-
-                <span class="flecha">
-                    →
-                </span>
-
-            </a>
-
-
-            <a
-                href="#"
-                class="tarjeta"
-                onclick="proximamente(event, 'Ganancias')"
-            >
-
-                <div class="icono">
-                    📈
-                </div>
-
-                <div class="contenido-tarjeta">
-
-                    <h3>
-                        Ganancias
-                    </h3>
-
-                    <p>
-                        Revisa tus ganancias y conoce
-                        el rendimiento de tu negocio.
-                    </p>
-
-                </div>
-
-                <span class="flecha">
-                    →
-                </span>
-
-            </a>
-
-        </section>
-
-
-        <section class="informacion">
-
-            <div class="info-icono">
-                💡
             </div>
 
-            <div>
+        </div>
 
-                <h3>
-                    Administra tu negocio desde un solo lugar
-                </h3>
+    </section>
+
+
+    <section class="problem" id="nosotros">
+
+        <p class="subtitle">EL PROBLEMA</p>
+
+        <h2>
+            ¿Cansado de administrar tu negocio manualmente?
+        </h2>
+
+        <p>
+            Llevar el control de tus productos, ventas e inventario
+            en cuadernos o diferentes archivos puede generar errores
+            y hacerte perder tiempo. AdminMarket reúne todo lo que
+            necesitas en un solo lugar.
+        </p>
+
+    </section>
+
+    <section class="benefits" id="beneficios">
+
+        <p class="subtitle">¿POR QUÉ ADMINMARKET?</p>
+
+        <h2>
+            Todo lo que necesitas para tu negocio
+        </h2>
+
+        <div class="benefit-container">
+
+            <div class="benefit">
+
+                <div class="big-icon">📦</div>
+
+                <h3>Inventario</h3>
 
                 <p>
-                    Con AdminMarket puedes controlar productos,
-                    ventas, inventario y ganancias de manera
-                    sencilla.
+                    Consulta tus productos y controla
+                    fácilmente el stock disponible.
                 </p>
 
             </div>
 
-        </section>
+
+            <div class="benefit">
+
+                <div class="big-icon">🛒</div>
+
+                <h3>Ventas</h3>
+
+                <p>
+                    Registra tus ventas y mantén
+                    organizado el movimiento de tu negocio.
+                </p>
+
+            </div>
 
 
-    </main>
+            <div class="benefit">
 
+                <div class="big-icon">📊</div>
+
+                <h3>Ganancias</h3>
+
+                <p>
+                    Conoce el rendimiento de tu negocio
+                    de manera rápida y sencilla.
+                </p>
+
+            </div>
+
+
+            <div class="benefit">
+
+                <div class="big-icon">⚡</div>
+
+                <h3>Fácil de usar</h3>
+
+                <p>
+                    Administra la información de tu negocio
+                    desde una plataforma sencilla.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cta">
+
+        <h2>
+            Lleva tu negocio al siguiente nivel
+        </h2>
+
+        <p>
+            Empieza a administrar tus productos, ventas,
+            inventario y ganancias desde un solo lugar.
+        </p>
+
+        <a href="login.html">
+            Comenzar ahora
+        </a>
+
+    </section>
 
     <footer>
 
         <p>
-            © 2026 AdminMarket · Gestión sencilla para tu negocio
+            © 2026 AdminMarket - Gestión sencilla para tu negocio
         </p>
 
     </footer>
 
 
+
     <script src="index.js"></script>
 
 </body>
-
 </html>
