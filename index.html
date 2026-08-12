@@ -5,54 +5,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
+    <title>AdminMarket - Inicio</title>
 
-    <title>AdminMarket</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <header class="navbar">
+
+        <a href="./index.html" class="logo">
+            <span class="logo-icon">▥</span>
+            <span class="admin">Admin</span><span class="market">Market</span>
+        </a>
+
+        <div class="usuario">
+
+            <a href="./iniciodesesion/index.html" class="inicio-sesion">
+                🔒 Inicio de sesión
+            </a>
+
+            <a href="./registrar/index.html" class="crear-cuenta">
+                👤 Crear cuenta
+            </a>
+
+        </div>
+
+    </header>
+
     <main class="contenedor">
 
-        <div class="cuadro">
 
-            <img 
-                src="./img/Logo de AdminMarket (1).png" 
-                alt="Logo de AdminMarket" 
-                class="logo"
-            >
 
-            <h1>Admin<span>Market</span></h1>
+        <section class="bienvenida">
 
-            <p class="descripcion">
-                Gestiona tu negocio de manera fácil,
-                rápida y segura.
-            </p>
+            <div>
 
-            <div class="botones">
+                <p class="saludo">
+                    Bienvenido a
+                </p>
 
-                <a 
-                    href="./inicio de sesion/index.html" 
-                    class="btn btn-iniciar"
-                >
-                    Iniciar Sesión
-                </a>
+                <h1>
+                    Admin<span>Market</span>
+                </h1>
 
-                <a 
-                    href="./registrar/index.html" 
-                    class="btn btn-registrar"
-                >
-                    Registrarse
-                </a>
+                <p class="descripcion">
+                    Administra tu negocio de forma fácil,
+                    rápida y segura.
+                </p>
 
             </div>
 
-            <p class="texto-inferior">
-                Administra tu negocio desde un solo lugar
+            <div class="icono-bienvenida">
+                🏪
+            </div>
+
+        </section>
+
+
+
+
+        <div class="titulo-seccion">
+
+            <h2>
+                ¿Qué deseas hacer?
+            </h2>
+
+            <p>
+                Selecciona una opción para comenzar.
             </p>
+
         </div>
+
+        <section class="tarjetas">
+
+
+            <a
+                href="#"
+                class="tarjeta tarjeta-productos"
+                onclick="proximamente(event, 'Registro de productos')"
+            >
+
+                <div class="icono">
+                    🛍️
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <h3>
+                        Registrar producto
+                    </h3>
+
+                    <p>
+                        Agrega nuevos productos,
+                        precios y cantidades a tu inventario.
+                    </p>
+
+                </div>
+
+                <span class="flecha">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="tarjeta"
+                onclick="proximamente(event, 'Registro de ventas')"
+            >
+
+                <div class="icono">
+                    🛒
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <h3>
+                        Registrar ventas
+                    </h3>
+
+                    <p>
+                        Registra las ventas realizadas
+                        y controla tus movimientos.
+                    </p>
+
+                </div>
+
+                <span class="flecha">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="tarjeta"
+                onclick="proximamente(event, 'Inventario')"
+            >
+
+                <div class="icono">
+                    📦
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <h3>
+                        Inventario
+                    </h3>
+
+                    <p>
+                        Consulta tus productos y
+                        controla el stock disponible.
+                    </p>
+
+                </div>
+
+                <span class="flecha">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="tarjeta"
+                onclick="proximamente(event, 'Ganancias')"
+            >
+
+                <div class="icono">
+                    📈
+                </div>
+
+                <div class="contenido-tarjeta">
+
+                    <h3>
+                        Ganancias
+                    </h3>
+
+                    <p>
+                        Revisa tus ganancias y conoce
+                        el rendimiento de tu negocio.
+                    </p>
+
+                </div>
+
+                <span class="flecha">
+                    →
+                </span>
+
+            </a>
+
+        </section>
+
+
+        <section class="informacion">
+
+            <div class="info-icono">
+                💡
+            </div>
+
+            <div>
+
+                <h3>
+                    Administra tu negocio desde un solo lugar
+                </h3>
+
+                <p>
+                    Con AdminMarket puedes controlar productos,
+                    ventas, inventario y ganancias de manera
+                    sencilla.
+                </p>
+
+            </div>
+
+        </section>
+
+
     </main>
 
-    <script src="./index.js"></script>
+
+    <footer>
+
+        <p>
+            © 2026 AdminMarket · Gestión sencilla para tu negocio
+        </p>
+
+    </footer>
+
+
+    <script src="index.js"></script>
+
 </body>
+
 </html>

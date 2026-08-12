@@ -1,202 +1,670 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #eaf7ff;
 
-    background: linear-gradient(
-        135deg,
-        #0ea5e9,
-        #2563eb
-    );
-
-    padding: 20px;
+    color: #172b4d;
 }
 
-.contenedor {
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.navbar {
+
     width: 100%;
+
+    min-height: 85px;
+
+    background: white;
+
     display: flex;
-    justify-content: center;
+
     align-items: center;
+
+    padding: 0 360px;
+
+    gap: 30px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.10);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
 }
 
-.cuadro {
-    position: relative;
 
-    width: 450px;
-    max-width: 100%;
-
-    background-color: white;
-
-    padding: 50px 45px;
-
-    border-radius: 25px;
-
-    text-align: center;
-
-    box-shadow: 
-        0 20px 50px rgba(0, 0, 0, 0.20);
-
-    animation: aparecer 0.8s ease;
-}
+/* =========================
+   LOGO
+========================= */
 
 .logo {
-    width: 150px;
-    max-width: 80%;
 
-    margin-bottom: 15px;
+    text-decoration: none;
 
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.05);
-}
-
-h1 {
-    font-size: 35px;
-    color: #2563eb;
-
-    margin-bottom: 10px;
-
-    font-weight: 700;
-}
-
-h1 span {
-    color: #f97316;
-}
-
-.descripcion {
-    color: #64748b;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 35px;
-}
-
-.botones {
     display: flex;
-    flex-direction: column;
+
+    align-items: center;
+
+    min-width: 185px;
+
+    font-size: 23px;
+
+    font-weight: bold;
+}
+
+.logo-icon {
+
+    color: #2864e8;
+
+    font-size: 29px;
+
+    margin-right: 8px;
+}
+
+.admin {
+    color: #172b4d;
+}
+
+.market {
+    color: #ff7417;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    flex: 1;
+}
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #4f5d73;
+
+    font-size: 15px;
+
+    padding: 13px 15px;
+
+    border-radius: 9px;
+
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+
+    background: #edf4ff;
+
+    color: #2864e8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   USUARIO
+========================= */
+
+.usuario {
+
+    display: flex;
+
+    align-items: center;
+
     gap: 15px;
 }
 
-.btn {
-    width: 100%;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
+.inicio-sesion {
+
     text-decoration: none;
-    display: block;
-    cursor: pointer;
-    transition: 
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background-color 0.3s ease;
+
+    color: #46536a;
+
+    font-size: 15px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
 }
 
-.btn-iniciar {
+.inicio-sesion:hover {
+
+    background: #eaf2ff;
+
+    color: #2864e8;
+
+    transform: translateY(-2px);
+}
+
+.crear-cuenta {
+
+    text-decoration: none;
+
     color: white;
-    background-color: #2563eb;
-    border: 2px solid #2563eb;
+
+    background: #2864e8;
+
+    padding: 13px 20px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
-.btn-iniciar:hover {
-    background-color: #1d4ed8;
-    transform: translateY(-3px);
-    box-shadow: 
-        0 8px 20px rgba(37, 99, 235, 0.35);
+.crear-cuenta:hover {
+
+    background: #174fc7;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(40, 100, 232, 0.25);
 }
 
-.btn-registrar {
-    color: #2563eb;
-    background-color: white;
-    border: 2px solid #2563eb;
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+
+    width: 92%;
+
+    max-width: 1250px;
+
+    margin: 40px auto;
 }
 
-.btn-registrar:hover {
+
+/* =========================
+   BIENVENIDA
+========================= */
+
+.bienvenida {
+
+    background: linear-gradient(
+        120deg,
+        #2864e8,
+        #159bd7
+    );
+
+    border-radius: 18px;
+
+    padding: 35px 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
     color: white;
-    background-color: #2563eb;
-    transform: translateY(-3px);
-    box-shadow: 
-        0 8px 20px rgba(37, 99, 235, 0.35);
+
+    box-shadow:
+        0 10px 25px rgba(40, 100, 232, 0.20);
+
+    overflow: hidden;
+
+    position: relative;
 }
 
-.texto-inferior {
-    margin-top: 30px;
-    font-size: 13px;
-    color: #94a3b8;
+.saludo {
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+
+    opacity: 0.9;
 }
 
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+.bienvenida h1 {
 
-    to {
-        opacity: 1;
+    font-size: 38px;
+
+    margin-bottom: 8px;
+}
+
+.bienvenida h1 span {
+
+    color: #ff8a3d;
+}
+
+.descripcion {
+
+    font-size: 16px;
+
+    opacity: 0.9;
+}
+
+.icono-bienvenida {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 58px;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
+/* Animación */
+
+@keyframes flotar {
+
+    0% {
         transform: translateY(0);
     }
 
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-@media (max-width: 600px) {
 
-    body {
-        padding: 15px;
+/* =========================
+   TÍTULO SECCIÓN
+========================= */
+
+.titulo-seccion {
+
+    margin-top: 40px;
+
+    margin-bottom: 22px;
+}
+
+.titulo-seccion h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 6px;
+}
+
+.titulo-seccion p {
+
+    color: #687994;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjetas {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.tarjeta {
+
+    background: white;
+
+    border: 1px solid #dce5ef;
+
+    border-radius: 15px;
+
+    min-height: 180px;
+
+    padding: 25px;
+
+    text-decoration: none;
+
+    color: #172b4d;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.tarjeta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+
+    height: 100%;
+
+    left: 0;
+
+    top: 0;
+
+    background: #2864e8;
+
+    transform: scaleY(0);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #2864e8;
+
+    box-shadow:
+        0 10px 25px rgba(40, 100, 232, 0.15);
+}
+
+.tarjeta:hover::before {
+
+    transform: scaleY(1);
+}
+
+
+/* =========================
+   ICONOS
+========================= */
+
+.icono {
+
+    min-width: 65px;
+
+    height: 65px;
+
+    border-radius: 14px;
+
+    background: #eaf2ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover .icono {
+
+    background: #2864e8;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   CONTENIDO TARJETA
+========================= */
+
+.contenido-tarjeta {
+
+    flex: 1;
+}
+
+.contenido-tarjeta h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 9px;
+
+    color: #172b4d;
+}
+
+.contenido-tarjeta p {
+
+    color: #687994;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FLECHA
+========================= */
+
+.flecha {
+
+    font-size: 25px;
+
+    color: #2864e8;
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover .flecha {
+
+    transform: translateX(7px);
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.informacion {
+
+    background: white;
+
+    border: 1px solid #dce5ef;
+
+    border-radius: 14px;
+
+    margin-top: 25px;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.info-icono {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 12px;
+
+    background: #fff4e8;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.informacion h3 {
+
+    margin-bottom: 5px;
+
+    font-size: 17px;
+}
+
+.informacion p {
+
+    color: #687994;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #78869c;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .menu a {
+
+        padding: 10px;
+
+        font-size: 14px;
     }
 
-    .cuadro {
+    .inicio-sesion {
+
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        flex-wrap: wrap;
+
+        padding: 15px 20px;
+    }
+
+    .menu {
+
+        order: 3;
+
         width: 100%;
-        padding: 40px 25px;
-        border-radius: 20px;
+
+        overflow-x: auto;
     }
 
-    .logo {
-        width: 130px;
+    .usuario {
+
+        margin-left: auto;
     }
 
-    h1 {
+    .tarjetas {
+
+        grid-template-columns: 1fr;
+    }
+
+    .bienvenida {
+
+        padding: 30px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contenedor {
+
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+    .bienvenida {
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .bienvenida h1 {
+
         font-size: 30px;
     }
 
-    .descripcion {
-        font-size: 15px;
+    .icono-bienvenida {
+
+        width: 80px;
+
+        height: 80px;
+
+        font-size: 40px;
     }
 
-}
+    .tarjeta {
 
-.hidden {
-    display: none !important;
-}
+        min-height: 150px;
 
-.view {
-    animation: fadeIn 0.3s ease-in-out;
-}
+        padding: 20px;
+    }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.btn-back {
-    background: none;
-    border: none;
-    color: #666;
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 0.9rem;
-}
-.btn-back:hover {
-    text-decoration: underline;
 }
 
 @media (max-height: 550px) and (orientation: landscape) {
